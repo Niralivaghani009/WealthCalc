@@ -32,7 +32,7 @@ export function Hero() {
         <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-accent/10 blur-3xl animate-pulse delay-1000" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-20 pb-20 sm:pb-32">
         <div className="text-center">
           {/* Badge */}
           <div
@@ -97,7 +97,7 @@ export function Hero() {
             >
               <a href="#sip-calculator">
                 <Calculator className="mr-2 h-5 w-5" aria-hidden="true" />
-                Try SIP Calculator
+                Try Wealth Calculator
               </a>
             </Button>
             <Button
@@ -116,7 +116,7 @@ export function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:block" aria-hidden="true">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden sm:block" aria-hidden="true">
         <div className="flex flex-col items-center gap-2 text-muted-foreground">
           <span className="text-xs font-medium">Scroll to explore</span>
           <div className="h-10 w-6 rounded-full border-2 border-muted-foreground/30 p-1">

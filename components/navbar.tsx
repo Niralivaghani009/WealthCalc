@@ -7,7 +7,7 @@ import { Menu, X, Sun, Moon, TrendingUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { href: "#home", label: "Home" },
+  { href: "/", label: "Home" },
   { href: "#calculators", label: "Calculators" },
   { href: "#goal-planner", label: "Goal Planner" },
   { href: "#learn", label: "Learn" },
@@ -49,7 +49,7 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link
-            href="#home"
+            href="/"
             className="flex items-center gap-2 text-xl font-bold text-foreground hover:text-primary transition-colors"
             aria-label="WealthCalc - Home"
           >

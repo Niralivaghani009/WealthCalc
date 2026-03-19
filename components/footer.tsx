@@ -16,6 +16,11 @@ const footerLinks = {
     { label: "RD Calculator", href: "#rd-calculator" },
     { label: "Compound Interest", href: "#compound-calculator" },
   ],
+  legal: [
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms & Conditions", href: "/terms-and-conditions" },
+    { label: "Disclaimer", href: "/disclaimer" },
+  ],
 }
 
 export function Footer() {
@@ -26,9 +31,9 @@ export function Footer() {
         <div className="py-12 sm:py-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Brand */}
-            <div className="sm:col-span-2 lg:col-span-1">
+            <div className="lg:col-span-1">
               <Link
-                href="#home"
+                href="/"
                 className="inline-flex items-center gap-2 text-xl font-bold mb-4"
               >
                 <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
@@ -76,13 +81,21 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Contact */}
+            {/* Legal */}
             <div>
-              <h3 className="font-semibold mb-4">About</h3>
-              <p className="text-sm text-background/70 leading-relaxed">
-                WealthCalc provides free, accurate financial calculators to help
-                Indians make informed investment decisions.
-              </p>
+              <h3 className="font-semibold mb-4">Legal</h3>
+              <ul className="space-y-3">
+                {footerLinks.legal.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-background/70 hover:text-background transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
