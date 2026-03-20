@@ -82,11 +82,11 @@ export function EMICalculator() {
   return (
     <section
       id="emi-calculator"
-      className="py-16 sm:py-24 bg-secondary/30"
+      className="py-12 sm:py-16 lg:py-24 bg-secondary/30"
       aria-labelledby="emi-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <h2
             id="emi-heading"
             className="text-3xl sm:text-4xl font-bold text-foreground mb-4"
@@ -98,7 +98,7 @@ export function EMICalculator() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Inputs */}
           <Card>
             <CardHeader>
@@ -116,7 +116,7 @@ export function EMICalculator() {
                       type="number"
                       value={loanAmount}
                       onChange={(e) => setLoanAmount(Number(e.target.value))}
-                      className="w-full sm:w-36 pl-7 text-right"
+                      className="w-full max-w-36 pl-7 text-right"
                       min={100000}
                       max={100000000}
                     />
@@ -146,7 +146,7 @@ export function EMICalculator() {
                       type="number"
                       value={interestRate}
                       onChange={(e) => setInterestRate(Number(e.target.value))}
-                      className="w-full sm:w-24 text-right pr-7"
+                      className="w-full max-w-24 text-right pr-7"
                       min={1}
                       max={30}
                       step={0.1}
@@ -178,7 +178,7 @@ export function EMICalculator() {
                       type="number"
                       value={tenure}
                       onChange={(e) => setTenure(Number(e.target.value))}
-                      className="w-full sm:w-28 text-right pr-16"
+                      className="w-full max-w-28 text-right pr-16"
                       min={12}
                       max={360}
                     />
@@ -207,7 +207,7 @@ export function EMICalculator() {
             <Card className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
               <CardContent className="p-6 text-center">
                 <p className="text-sm opacity-90 mb-2">Monthly EMI</p>
-                <p className="text-3xl sm:text-5xl font-bold break-all">
+                <p className="text-2xl sm:text-4xl lg:text-5xl font-bold">
                   {formatIndianCurrency(calculations.emi)}
                 </p>
               </CardContent>
@@ -218,7 +218,7 @@ export function EMICalculator() {
               <Card className="bg-accent/10 border-accent/20">
                 <CardContent className="p-4 text-center">
                   <p className="text-sm text-muted-foreground mb-1">Total Interest</p>
-                  <p className="text-base sm:text-xl font-bold text-accent break-all">
+                  <p className="text-lg sm:text-xl font-bold text-accent">
                     {formatIndianCurrency(calculations.totalInterest)}
                   </p>
                 </CardContent>
@@ -226,7 +226,7 @@ export function EMICalculator() {
               <Card className="bg-success/10 border-success/20">
                 <CardContent className="p-4 text-center">
                   <p className="text-sm text-muted-foreground mb-1">Total Payment</p>
-                  <p className="text-base sm:text-xl font-bold text-success break-all">
+                  <p className="text-lg sm:text-xl font-bold text-success">
                     {formatIndianCurrency(calculations.totalPayment)}
                   </p>
                 </CardContent>
@@ -239,7 +239,7 @@ export function EMICalculator() {
                 <CardTitle className="text-lg">Payment Breakdown</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="h-48 sm:h-64">
+                <div className="h-64 sm:h-80 lg:h-96">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie
@@ -295,33 +295,33 @@ export function EMICalculator() {
                   <span className="hidden sm:inline">Download PDF</span>
                 </Button>
               </CardHeader>
-              <CardContent className="px-0 sm:px-6">
-                <ScrollArea className="h-64">
-                  <div className="min-w-[450px] px-4 sm:px-0">
+              <CardContent className="px-2 sm:px-6">
+                <ScrollArea className="h-64 sm:h-80">
+                  <div className="min-w-[320px] sm:min-w-[450px] px-2 sm:px-0">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-14">Month</TableHead>
-                          <TableHead className="text-right">EMI</TableHead>
+                          <TableHead className="w-12 sm:w-14">Month</TableHead>
+                          <TableHead className="text-right hidden sm:table-cell">EMI</TableHead>
                           <TableHead className="text-right">Principal</TableHead>
                           <TableHead className="text-right">Interest</TableHead>
-                          <TableHead className="text-right">Balance</TableHead>
+                          <TableHead className="text-right hidden lg:table-cell">Balance</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
                         {calculations.amortizationSchedule.map((row) => (
                           <TableRow key={row.month}>
                             <TableCell className="font-medium">{row.month}</TableCell>
-                            <TableCell className="text-right text-sm">
+                            <TableCell className="text-right text-xs sm:text-sm hidden sm:table-cell">
                               {formatIndianCurrency(row.emi)}
                             </TableCell>
-                            <TableCell className="text-right text-primary text-sm">
+                            <TableCell className="text-right text-primary text-xs sm:text-sm">
                               {formatIndianCurrency(row.principal)}
                             </TableCell>
-                            <TableCell className="text-right text-accent text-sm">
+                            <TableCell className="text-right text-accent text-xs sm:text-sm">
                               {formatIndianCurrency(row.interest)}
                             </TableCell>
-                            <TableCell className="text-right font-medium text-sm">
+                            <TableCell className="text-right font-medium text-xs sm:text-sm hidden lg:table-cell">
                               {formatIndianCurrency(row.balance)}
                             </TableCell>
                           </TableRow>

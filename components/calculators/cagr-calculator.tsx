@@ -71,11 +71,11 @@ export function CAGRCalculator() {
   return (
     <section
       id="cagr-calculator"
-      className="py-16 sm:py-24"
+      className="py-12 sm:py-16 lg:py-24 bg-secondary/30"
       aria-labelledby="cagr-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <h2
             id="cagr-heading"
             className="text-3xl sm:text-4xl font-bold text-foreground mb-4"
@@ -95,7 +95,7 @@ export function CAGRCalculator() {
 
           {/* Mode 1: Calculate CAGR */}
           <TabsContent value="calculate-cagr">
-            <div className="grid lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
               <Card>
                 <CardHeader>
                   <CardTitle>Investment Details</CardTitle>
@@ -279,7 +279,7 @@ export function CAGRCalculator() {
 
           {/* Mode 2: Calculate Final Value */}
           <TabsContent value="calculate-value">
-            <div className="grid lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
               <Card>
                 <CardHeader>
                   <CardTitle>Investment Details</CardTitle>

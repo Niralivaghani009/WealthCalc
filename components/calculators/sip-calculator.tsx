@@ -90,11 +90,11 @@ export function SIPCalculator() {
   return (
     <section
       id="sip-calculator"
-      className="py-16 sm:py-24"
+      className="py-12 sm:py-16 lg:py-24 bg-secondary/30"
       aria-labelledby="sip-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <h2
             id="sip-heading"
             className="text-3xl sm:text-4xl font-bold text-foreground mb-4"
@@ -106,7 +106,7 @@ export function SIPCalculator() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Inputs */}
           <Card>
             <CardHeader>
@@ -124,7 +124,7 @@ export function SIPCalculator() {
                       type="number"
                       value={monthlyAmount}
                       onChange={(e) => setMonthlyAmount(Number(e.target.value))}
-                      className="w-full sm:w-32 pl-7 text-right"
+                      className="w-full max-w-32 pl-7 text-right"
                       min={500}
                       max={100000}
                     />
@@ -154,7 +154,7 @@ export function SIPCalculator() {
                       type="number"
                       value={expectedReturn}
                       onChange={(e) => setExpectedReturn(Number(e.target.value))}
-                      className="w-full sm:w-24 text-right pr-7"
+                      className="w-full max-w-24 text-right pr-7"
                       min={1}
                       max={30}
                       step={0.5}
@@ -186,7 +186,7 @@ export function SIPCalculator() {
                       type="number"
                       value={timePeriod}
                       onChange={(e) => setTimePeriod(Number(e.target.value))}
-                      className="w-full sm:w-24 text-right pr-12"
+                      className="w-full max-w-24 text-right pr-12"
                       min={1}
                       max={40}
                     />
@@ -227,7 +227,7 @@ export function SIPCalculator() {
                           type="number"
                           value={stepUpPercent}
                           onChange={(e) => setStepUpPercent(Number(e.target.value))}
-                          className="w-full sm:w-24 text-right pr-7"
+                          className="w-full max-w-24 text-right pr-7"
                           min={1}
                           max={50}
                         />
