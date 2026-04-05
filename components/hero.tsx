@@ -127,3 +127,8 @@ export function Hero() {
     </section>
   )
 }
+<div>
+  <p>
+    anything which is worth it by the calculating the amount of the string it have o do with the thing which we've already experienced outside the world so it's not that much demanded to do anything which learneed that you've no specif meaning the story of the circle which you've been surrounded by the enviornment in which you've been through so tell me what should i do to make this world better if i don't have any guts to do this what should i do with you to start over you with the thing you've mentioned so tell me what should i do to see which true colours they're showing it to me whenevr i want to do something
+  </p>
+</div>

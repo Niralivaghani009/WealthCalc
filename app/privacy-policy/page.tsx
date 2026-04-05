@@ -142,7 +142,7 @@ export default function PrivacyPolicy() {
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Posting the new policy on this page</li>
                     <li>Updating the "Last updated" date</li>
-                    <li>Sending email notifications for significant changes</li>
+                    {/* <li>Sending email notifications for significant changes</li> */}
                   </ul>
                 </div>
               </section>
@@ -156,7 +156,7 @@ export default function PrivacyPolicy() {
                   </p>
                   <div className="mt-4 space-y-2">
                     <p><strong>Email:</strong> privacy@wealthcalc.in</p>
-                    <p><strong>Website:</strong> https://wealthcalc.in</p>
+                    {/* <p><strong>Website:</strong> https://wealthcalc.in</p> */}
                   </div>
                 </div>
               </section>

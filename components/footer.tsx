@@ -3,18 +3,18 @@ import { TrendingUp } from "lucide-react"
 
 const footerLinks = {
   calculators: [
-    { label: "SIP Calculator", href: "#sip-calculator" },
-    { label: "Lumpsum Calculator", href: "#lumpsum-calculator" },
-    { label: "PPF Calculator", href: "#ppf-calculator" },
-    { label: "FD Calculator", href: "#fd-calculator" },
-    { label: "EMI Calculator", href: "#emi-calculator" },
-    { label: "CAGR Calculator", href: "#cagr-calculator" },
+    { label: "SIP Calculator", href: "/#sip-calculator" },
+    { label: "Lumpsum Calculator", href: "/#lumpsum-calculator" },
+    { label: "PPF Calculator", href: "/#ppf-calculator" },
+    { label: "FD Calculator", href: "/#fd-calculator" },
+    { label: "EMI Calculator", href: "/#emi-calculator" },
+    { label: "CAGR Calculator", href: "/#cagr-calculator" },
   ],
   resources: [
-    { label: "Goal Planner", href: "#goal-planner" },
-    { label: "Learn", href: "#learn" },
-    { label: "RD Calculator", href: "#rd-calculator" },
-    { label: "Compound Interest", href: "#compound-calculator" },
+    { label: "Goal Planner", href: "/#goal-planner" },
+    { label: "Learn", href: "/#learn" },
+    { label: "RD Calculator", href: "/#rd-calculator" },
+    { label: "Compound Interest", href: "/#compound-calculator" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },

@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+ import { Metadata } from 'next'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { FileText, CheckCircle, AlertTriangle, Users } from 'lucide-react'
@@ -45,7 +45,7 @@ export default function TermsAndConditions() {
                 </div>
               </section>
 
-              {/* Description of Service */}
+              {/* Description of \Service */}
               <section className="bg-card p-6 rounded-lg border">
                 <h2 className="text-xl font-semibold mb-4">Description of Service</h2>
                 <div className="space-y-4 text-muted-foreground">
@@ -131,7 +131,7 @@ export default function TermsAndConditions() {
                   </p>
                 </div>
               </section>
-
+<></>
               {/* Limitation of Liability */}
               <section className="bg-card p-6 rounded-lg border">
                 <h2 className="text-xl font-semibold mb-4">Limitation of Liability</h2>
@@ -251,7 +251,7 @@ export default function TermsAndConditions() {
                   </p>
                   <div className="mt-4 space-y-2">
                     <p><strong>Email:</strong> legal@wealthcalc.in</p>
-                    <p><strong>Website:</strong> https://wealthcalc.in</p>
+                    {/* <p><strong>Website:</strong> https://wealthcalc.in</p> */}
                   </div>
                 </div>
               </section>
