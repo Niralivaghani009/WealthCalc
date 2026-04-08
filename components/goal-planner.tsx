@@ -274,7 +274,10 @@ export function GoalPlanner() {
                   <div
                     className={`flex h-10 w-10 items-center justify-center rounded-lg ${selectedGoalData.color} text-white`}
                   >
-                    <selectedGoalData.icon className="h-5 w-5" />
+                    {(() => {
+                      const Icon = selectedGoalData.icon
+                      return <Icon className="h-5 w-5" />
+                    })()}
                   </div>
                   <CardTitle>{selectedGoalData.name} Goal</CardTitle>
                 </div>
@@ -428,7 +431,10 @@ export function GoalPlanner() {
                       <div
                         className={`flex h-10 w-10 items-center justify-center rounded-lg ${selectedGoalData.color} text-white`}
                       >
-                        <selectedGoalData.icon className="h-5 w-5" />
+                        {(() => {
+                      const Icon = selectedGoalData.icon
+                      return <Icon className="h-5 w-5" />
+                    })()}
                       </div>
                       <CardTitle>{selectedGoalData.name} Plan</CardTitle>
                     </div>
