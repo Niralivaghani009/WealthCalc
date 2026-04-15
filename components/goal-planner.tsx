@@ -124,7 +124,7 @@ export function GoalPlanner() {
     const monthlyRate = moderateRate / 12 / 100
     const months = timeHorizon * 12
     const projectedFromSavings = currentSavings * Math.pow(1 + moderateRate / 100, timeHorizon)
-
+    
     const requiredSIP = calculateSIP(moderateRate)
     const projectedCorpus =
       projectedFromSavings +
@@ -500,7 +500,7 @@ export function GoalPlanner() {
                         <p className="text-sm text-muted-foreground">
                           {results.recommendation}
                         </p>
-                      </div>
+                      </div> `2`
                     </div>
                   </div>
 
